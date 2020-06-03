@@ -1,0 +1,8 @@
+aymen@Lenovo-IdeaPad-S145:~/holberton-system_engineering-devops/0x00-shell_basics$ pwd
+/home/aymen/holberton-system_engineering-devops/0x00-shell_basics
+aymen@Lenovo-IdeaPad-S145:$ echo $HOME
+/home/aymen
+aymen@Lenovo-IdeaPad-S145:~/holberton-system_engineering-devops/0x00-shell_basics$ source ./2-bring_me_home
+aymen@Lenovo-IdeaPad-S145:~$ pwd
+/home/aymen
+aymen@Lenovo-IdeaPad-S145:~$
