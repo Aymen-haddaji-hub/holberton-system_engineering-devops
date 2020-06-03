@@ -1,4 +1,4 @@
 #!/bin/bash
-mv [A-Z]* /tmp/u
+mv -type "[[:upper:]]*"
 
 
