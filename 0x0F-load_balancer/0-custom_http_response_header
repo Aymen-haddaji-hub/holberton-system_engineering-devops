@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Configure a new ubuntu machine to have Nginx and have a custom HTTP header.
+apt-get update
+apt-get install -y nginx
+service nginx start
+sed -i "20i\        add_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
+service nginx restart
