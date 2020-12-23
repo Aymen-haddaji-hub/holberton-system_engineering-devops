@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-# Script points subdomains to IPs of servers
+# information about domain and subdomain using
+# bash function and awk and dig
+# shellcheck disable=2086
+
 
 domain=$1
 function list_all()
