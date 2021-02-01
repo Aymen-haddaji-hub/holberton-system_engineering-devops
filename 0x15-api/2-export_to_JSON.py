@@ -29,7 +29,7 @@ if __name__ == '__main__':
     for i in title:
         print("\t {}".format(i))
     req = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'
-                       .format(argv[1]))
+                       .format(sys.argv[1]))
     new_d = {}
     with open("{}.json".format(sys.argv[1]), "w") as file:
         r_json = req.json()
