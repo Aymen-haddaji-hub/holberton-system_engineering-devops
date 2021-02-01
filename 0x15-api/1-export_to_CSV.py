@@ -8,12 +8,14 @@ from sys import argv
 import csv
 
 if __name__ == '__main__':
-
-    filename = argv[1] + ".csv"
     id = requests.get(
-        'https://jsonplaceholder.typicode.com/users/{}'.format(argv[1]))
+        'https://jsonplaceholder.typicode.com/users/' +
+        argv[1])
+    filename = str(id.json()['id']) + ".csv"
+
     req = requests.get('https://jsonplaceholder.typicode.com/todos/')
     name = (id.json().get('name'))
+
     with open(filename, "w") as f:
         r_json = req.json()
         for i in r_json:
