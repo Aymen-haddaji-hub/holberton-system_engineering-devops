@@ -4,7 +4,7 @@ returns information about his/her todo list progress."""
 
 import csv
 import requests
-from sys import argv
+from sys import *
 
 
 if __name__ == '__main__':
