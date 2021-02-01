@@ -14,7 +14,7 @@ if __name__ == '__main__':
     title = []
     id = requests.get(
         'https://jsonplaceholder.typicode.com/users/{}'.format(sys.argv[1]))
-    #req = requests.get('https://jsonplaceholder.typicode.com/todos/')
+    req = requests.get('https://jsonplaceholder.typicode.com/todos/')
     name = (id.json().get('name'))
     username = (id.json().get("username"))
     r_json = req.json()
