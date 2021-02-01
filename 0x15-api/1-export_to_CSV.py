@@ -16,7 +16,7 @@ if __name__ == '__main__':
         'https://jsonplaceholder.typicode.com/users/{}'.format(sys.argv[1]))
     req = requests.get('https://jsonplaceholder.typicode.com/todos/')
     name = (id.json().get('name'))
-    username = (id.get("username"))
+    username = (id.json().get("username"))
     r_json = req.json()
     for i in r_json:
         if i.get('userId') == int(sys.argv[1]):
