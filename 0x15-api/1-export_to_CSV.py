@@ -8,6 +8,8 @@ from sys import argv
 import csv
 
 if __name__ == '__main__':
+    if argv[1] is not int:
+        pass
     id = requests.get(
         'https://jsonplaceholder.typicode.com/users/' +
         argv[1])
