@@ -28,7 +28,9 @@ if __name__ == '__main__':
           .format(name, completed_tasks, total_tasks))
     for i in title:
         print("\t {}".format(i))
-
+    req = requests.get(
+        'https://jsonplaceholder.typicode.com/users/' +
+        (sys.argv[1]) + '/todos')
     with open("{}.csv".format(sys.argv[1]), "w") as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for task in req.json():
