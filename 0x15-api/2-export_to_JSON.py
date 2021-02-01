@@ -28,9 +28,8 @@ if __name__ == '__main__':
           .format(name, completed_tasks, total_tasks))
     for i in title:
         print("\t {}".format(i))
-    req = requests.get(
-        'https://jsonplaceholder.typicode.com/users/' +
-        (sys.argv[1]) + '/todos')
+    req = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'
+                       .format(argv[1]))
     new_d = {}
     with open("{}.json".format(sys.argv[1]), "w") as file:
         r_json = req.json()
