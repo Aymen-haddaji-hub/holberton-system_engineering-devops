@@ -3,6 +3,6 @@
 #(instead of using Bash as you were previously doing).
 
 exec { 'Fin and replace the wrong syntax':
-    path    => 'usr/bin',
+    path    => '/bin',
     command => 'sed -i -e "s/phpp/php/g" /var/www/html/wp-settings.php'
 }
